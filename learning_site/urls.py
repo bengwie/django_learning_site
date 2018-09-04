@@ -21,7 +21,7 @@ import view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^course/$', include('courses.urls')),
+    url(r'^courses/', include('courses.urls')),
     url(r'^$', view.hello_world)
 ]
 
