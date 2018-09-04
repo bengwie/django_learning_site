@@ -42,3 +42,22 @@ Migrations for 'courses':
 
     In [8]: Course.objects.all()
     Out[8]: <QuerySet [<Course: Course object>]>
+
+-----------------------------------------------------------------------------------------------------------------------
+    jhidayat-a01:learning_site jhidayat$ python manage.py makemigrations courses
+    System check identified some issues:
+
+    WARNINGS:
+    ?: (urls.W001) Your URL pattern '^course/$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+    Migrations for 'courses':
+      courses/migrations/0002_step.py
+        - Create model Step
+    jhidayat-a01:learning_site jhidayat$ python manage.py migrate courses
+    System check identified some issues:
+
+    WARNINGS:
+    ?: (urls.W001) Your URL pattern '^course/$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+    Operations to perform:
+      Apply all migrations: courses
+    Running migrations:
+      Applying courses.0002_step... OK
